@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {Http, Response} from "@angular/http";
 import {RecipeService} from "../recipe/recipe.service";
-import {Recipe} from "../recipe/recipe.module";
+import {Recipe} from "../recipe/recipe.model";
 import {AuthService} from "../auth/auth.service";
 @Injectable()
 export class DataStoreService {

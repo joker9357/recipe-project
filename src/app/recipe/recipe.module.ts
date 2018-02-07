@@ -1,15 +1,30 @@
-import {Ingredient} from '../shared/ingredient.module';
-export class Recipe {
-  public name: string;
-  public description: string;
-  public imagePath: string;
-  public ingredients: Ingredient[];
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
-  constructor(name: string, description: string, imagePath: string, ingredients: Ingredient[]) {
-    this.name = name;
-    this.description = description;
-    this.imagePath = imagePath;
-    this.ingredients = ingredients;
-  }
+import { RecipeComponent } from './recipe.component';
+import { RecipeStartComponent } from './recipe-start/recipe-start.component';
+import { RecipeListComponent } from './recipe-list/recipe-list.component';
+import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
+import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
+import { RecipeItemComponent } from './recipe-list/recipe-item/recipe-item.component';
+import { RecipesRoutingModule } from './recipes-routing.Module';
+import { SharedModule } from '../shared/shared.module';
 
-}
+@NgModule({
+  declarations: [
+    RecipeComponent,
+    RecipeStartComponent,
+    RecipeListComponent,
+    RecipeEditComponent,
+    RecipeDetailComponent,
+    RecipeItemComponent
+  ],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    RecipesRoutingModule,
+    SharedModule
+  ]
+})
+export class RecipesModule {}
